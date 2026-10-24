@@ -1,0 +1,222 @@
+---
+name: Cyber-Minimalist Portfolio
+colors:
+  surface: '#0b1326'
+  surface-dim: '#0b1326'
+  surface-bright: '#31394d'
+  surface-container-lowest: '#060e20'
+  surface-container-low: '#131b2e'
+  surface-container: '#171f33'
+  surface-container-high: '#222a3d'
+  surface-container-highest: '#2d3449'
+  on-surface: '#dae2fd'
+  on-surface-variant: '#bcc9cd'
+  inverse-surface: '#dae2fd'
+  inverse-on-surface: '#283044'
+  outline: '#869397'
+  outline-variant: '#3d494c'
+  surface-tint: '#4cd7f6'
+  primary: '#4cd7f6'
+  on-primary: '#003640'
+  primary-container: '#06b6d4'
+  on-primary-container: '#00424f'
+  inverse-primary: '#00687a'
+  secondary: '#4edea3'
+  on-secondary: '#003824'
+  secondary-container: '#00a572'
+  on-secondary-container: '#00311f'
+  tertiary: '#adc6ff'
+  on-tertiary: '#002e6a'
+  tertiary-container: '#78a5ff'
+  on-tertiary-container: '#00397f'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#acedff'
+  primary-fixed-dim: '#4cd7f6'
+  on-primary-fixed: '#001f26'
+  on-primary-fixed-variant: '#004e5c'
+  secondary-fixed: '#6ffbbe'
+  secondary-fixed-dim: '#4edea3'
+  on-secondary-fixed: '#002113'
+  on-secondary-fixed-variant: '#005236'
+  tertiary-fixed: '#d8e2ff'
+  tertiary-fixed-dim: '#adc6ff'
+  on-tertiary-fixed: '#001a42'
+  on-tertiary-fixed-variant: '#004395'
+  background: '#0b1326'
+  on-background: '#dae2fd'
+  surface-variant: '#2d3449'
+typography:
+  headline-xl:
+    fontFamily: Geist
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: 56px
+    letterSpacing: -0.03em
+  headline-xl-mobile:
+    fontFamily: Geist
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg:
+    fontFamily: Geist
+    fontSize: 32px
+    fontWeight: '600'
+    lineHeight: 40px
+    letterSpacing: -0.02em
+  headline-lg-mobile:
+    fontFamily: Geist
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: 32px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Geist
+    fontSize: 20px
+    fontWeight: '500'
+    lineHeight: 28px
+    letterSpacing: -0.01em
+  headline-sm:
+    fontFamily: Geist
+    fontSize: 16px
+    fontWeight: '500'
+    lineHeight: 24px
+    letterSpacing: 0em
+  body-lg:
+    fontFamily: Inter
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 26px
+    letterSpacing: -0.005em
+  body-md:
+    fontFamily: Inter
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 22px
+    letterSpacing: 0em
+  body-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 18px
+    letterSpacing: 0em
+  label-md:
+    fontFamily: JetBrains Mono
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 18px
+    letterSpacing: 0.02em
+  label-sm:
+    fontFamily: JetBrains Mono
+    fontSize: 11px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0.04em
+  code-inline:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+    letterSpacing: 0em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-md: 1.5rem
+  gutter-lg: 2rem
+  margin: 1rem
+  margin-md: 2rem
+  margin-lg: 4rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2.5rem
+---
+
+## Brand & Style
+
+This design system targets an elite, high-craft developer persona: architectural maturity, systems-level competence, and aesthetic rigor. Inspired by the refined technical surfaces of Linear, Vercel, and GitHub Dark, the visual language balances surgical precision with deliberate atmospheric depth. 
+
+The style sits at the intersection of **technical minimalism**, **subtle glassmorphism**, and **tactile cybernetics**. It communicates immense technical velocity and quiet authority through high-density data presentations, razor-thin borders, low-attenuation glows, and sharp typography.
+
+## Colors
+
+The palette is anchored by deep obsidian, cold slate, and layered charcoal backdrops, allowing surgical accents to communicate activity, execution status, and interactive states.
+
+- **Background Canvas (`#090D16`)**: The primary deep viewport void. Non-distracting, ultra-low luminosity.
+- **Surface Layer 1 (`#0F172A`)**: Base container color for sidebars, cards, and structured modules.
+- **Surface Layer 2 (`#1E293B`)**: Elevated interactions, tooltips, active tab indicators, and code callouts.
+- **Primary Accent (`#06B6D4` / Electric Cyan)**: Used for key calls-to-action, primary metric highlights, and terminal command execution lines.
+- **Secondary Accent (`#10B981` / Emerald Code)**: Denotes system health, production status, green test runs, and active deployment states.
+- **Tertiary Accent (`#3B82F6` / Hyperlink Blue)**: Reserved for deep code references, pipeline nodes, and secondary metadata paths.
+- **Subtle Stroke (`rgba(255, 255, 255, 0.08)`)**: Defines precision hairline component borders across all dark planes.
+
+## Typography
+
+Typography prioritizes hyper-legible information hierarchy and clean visual rhythm:
+- **Headings (Geist)**: Tightly tracked, crisp geometric sans-serif that echoes high-performance modern developer platforms.
+- **Body Text (Inter)**: Neutral, dependable, optimized for high readability across dense system documentation and project narratives.
+- **Technical Elements & Microcopy (JetBrains Mono)**: Handles all metadata, status badges, commit hashes, latency metrics, and code snippets, grounding the design in an authentic development environment.
+
+## Layout & Spacing
+
+The layout employs a high-density, 12-column responsive fluid grid designed to display technical artifacts, architectures, and repository statistics with minimum dead space and maximum structure.
+
+- **Desktop (>= 1024px)**: 12-column grid, max-width `1280px`, `gutter-lg` (`2rem`), `margin-lg` (`4rem`). High-information-density layouts with side-by-side terminal logs, architecture graphs, and modular stats cards.
+- **Tablet (768px - 1023px)**: 8-column grid, `gutter-md` (`1.5rem`), `margin-md` (`2rem`). Panels collapse gracefully into double-column configurations.
+- **Mobile (< 768px)**: 4-column grid, `gutter` (`1rem`), `margin` (`1rem`). Technical cards stack vertically into single-column feeds with horizontal micro-scroll for code blocks.
+
+## Elevation & Depth
+
+Visual hierarchy does not rely on heavy drop shadows, but rather on **tonal stepping**, **subtle hairline borders**, and **localized luminescent glows**:
+
+- **Hairline Contours**: Every elevated panel uses a 1px border styled as `rgba(255, 255, 255, 0.08)`. On hover, borders seamlessly shift to `rgba(6, 182, 212, 0.35)` or `rgba(255, 255, 255, 0.16)`.
+- **Glassmorphic Paneling**: Surface cards employ background translucency (`rgba(15, 23, 42, 0.75)`) combined with a `backdrop-blur: 12px` filter to create high-tech layering over ambient glows and charts.
+- **Backdrop Radial Gradients**: Subtle background glows (`radial-gradient(circle at 50% 0%, rgba(6, 182, 212, 0.06), transparent 70%)`) deliver contextual atmospheric lighting behind major feature spotlights.
+- **Atmospheric Glows**: Interactive elements use micro drop shadows with accent tinting (e.g., `box-shadow: 0 0 12px rgba(16, 185, 129, 0.25)` on live indicators or active states).
+
+## Shapes
+
+The design system uses a **Soft** shape language (`roundedness: 1` / `0.25rem` to `0.5rem`), referencing modern developer workspaces like VS Code tabs, terminal panels, and GitHub command surfaces. 
+
+- Sharp, structural edges ground the engineering credibility.
+- Fully rounded pills (`rounded-full`) are reserved strictly for technical tags, active deployment chips, and live environment status pills.
+
+## Components
+
+### Buttons
+- **Primary Action**: Solid cyan (`#06B6D4`) background with `#090D16` bold text. Subtle inner highlight and a faint external glow on hover (`0 0 16px rgba(6, 182, 212, 0.3)`).
+- **Secondary Action**: Surface background (`#0F172A`), 1px `rgba(255, 255, 255, 0.08)` border, neutral-100 text. Hover activates `border-color: rgba(255, 255, 255, 0.2)` and background `#1E293B`.
+- **Ghost / Icon Action**: Pure transparent base, transitioning to `rgba(255, 255, 255, 0.05)` on interaction, with crisp monochrome SVG icons.
+
+### Status Pills & Chips
+- Fully rounded pill geometry (`rounded-full`) using monospace typography (`label-sm`).
+- Built with transparent tinted backgrounds (`rgba(16, 185, 129, 0.1)`) and matching 1px hairline borders (`rgba(16, 185, 129, 0.2)`).
+- Preceded by a 6px pulsating dot indicator with an ambient glow (`box-shadow: 0 0 8px currentColor`).
+
+### Technical Cards
+- Encapsulated in `rgba(15, 23, 42, 0.8)` with a 1px border `rgba(255, 255, 255, 0.08)` and `backdrop-filter: blur(12px)`.
+- Cards feature an optional 32px top title bar mimicking a shell or IDE editor window, with file paths rendered in `label-sm` and a subtle 3-dot window decoration.
+
+### Interactive Code Blocks & Snippets
+- Inset background `#090D16` with a distinct, low-contrast 1px border.
+- Integrated syntax highlighting matching the core accent palette: cyan keywords, emerald strings, and blue variable declarations.
+- Features a floating, semi-transparent "Copy" action button with JetBrains Mono feedback labels.
+
+### Inputs & Terminal Command Bars
+- Inset dark fill (`#090D16`) with `rgba(255, 255, 255, 0.08)` borders.
+- Focused state eliminates traditional browser rings, activating a crisp border change to `#06B6D4` paired with an ultra-soft cyan perimeter glow.
+- Monospace input option equipped with a simulated blinking emerald cursor (`|`) for interactive CLI prompts.
+
+### Metric / Stat Counters
+- High-contrast visual modules featuring `headline-xl` values paired with tiny uppercase `label-sm` descriptions.
+- Accompanied by inline sparklines or micro-progress meters sporting emerald-to-cyan gradients.
