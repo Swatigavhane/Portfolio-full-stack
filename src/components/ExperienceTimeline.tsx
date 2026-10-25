@@ -27,11 +27,13 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ filterTe
       badgeColor: 'bg-secondary/10 text-secondary border-secondary/30',
       iconBg: 'border-primary/30 text-primary',
       bullets: [
-        'Architected and implemented a high-performance, real-time audio/video customer support feature using LiveKit (WebRTC), enabling direct in-app KYC verification and support calls without 3rd-party vendor licensing costs.',
-        'Designed and developed an embeddable Web SDK powering the Agent Dashboard across internal operations, integrating TanStack React Query for cached server-state synchronisation and low latency call handling.',
-        'Delivered end-to-end bot-assisted live chat customer support with seamless agent handoff, boosting CSAT scores by +40% in high-revenue consumer categories.',
-        'Led web performance optimization initiatives, slashing Largest Contentful Paint (LCP) from 4.2s to 1.2s via tree-shaking, bundle code-splitting, lazy hydration, and asset pipeline tuning.',
-        'Actively mentored junior and mid-level engineers, institutionalizing strict TypeScript practices, reusable component design systems, and automated testing suites.',
+        'Architected and built the Maestro Ticket Assignment Console from scratch to replace legacy vendor dependency, streamlining CX routing workflows and unlocking ₹22.2 Lakhs in projected annual cost savings.',
+        'Architected a real-time audio/video customer support platform using LiveKit and React to replace third-party Video KYC vendors, eliminating ₹4–5 Lakhs in annual licensing fees while scaling to support millions of users.',
+        'Engineered an embeddable Web SDK to manage real-time call request lifecycles and cleanly isolate a WebRTC UI service within an iframe, enabling seamless audio/video integration across 3 internal agent consoles.',
+        'Engineered a bot-assisted Live Agent Chat Support system with context-aware handoff, boosting CSAT by 40% for high-revenue categories (Rent) and enabling instant support for the Stock Trading platform.',
+        'Optimized Core Web Vitals for the customer chatbot, slashing Largest Contentful Paint (LCP) by 71% (4.2s to 1.2s) via code splitting, bundle optimization, and rendering performance tuning.',
+        'Collaborated cross-functionally with product, design, and backend teams in an Agile/Scrum environment to deliver scalable, accessible frontend solutions serving millions of users.',
+        'Mentored junior and mid-level engineers, establishing frontend coding standards, architecture review guidelines, and proactive code-review practices that accelerated team delivery speed.'
       ],
       skills: [
         { name: 'React.js', color: 'text-primary' },
@@ -39,7 +41,7 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ filterTe
         { name: 'LiveKit (WebRTC)', color: 'text-tertiary' },
         { name: 'React Query', color: 'text-on-surface' },
         { name: 'Embeddable SDK', color: 'text-outline' },
-        { name: 'WebSockets', color: 'text-primary' },
+        { name: 'Node.js', color: 'text-primary' },
       ],
     },
     {
@@ -115,8 +117,8 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ filterTe
 
   const filteredExperiences = filterTech
     ? experiences.filter((exp) =>
-        exp.skills.some((s) => s.name.toLowerCase().includes(filterTech.toLowerCase()))
-      )
+      exp.skills.some((s) => s.name.toLowerCase().includes(filterTech.toLowerCase()))
+    )
     : experiences;
 
   return (
