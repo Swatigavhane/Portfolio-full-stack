@@ -13,13 +13,10 @@ import { SkillsMatrix } from './components/SkillsMatrix.tsx';
 import { EducationCard } from './components/EducationCard.tsx';
 import { ContactTerminal } from './components/ContactTerminal.tsx';
 import { Footer } from './components/Footer.tsx';
-import { InteractiveDemosModal } from './components/InteractiveDemosModal.tsx';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('overview');
   const [selectedTech, setSelectedTech] = useState<string | null>(null);
-  const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
-  const [demoModalTab, setDemoModalTab] = useState<'webrtc' | 'csv' | 'editor'>('webrtc');
 
   // Scroll spy for navigation
   useEffect(() => {
@@ -43,11 +40,6 @@ export default function App() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleOpenDemo = (tab: 'webrtc' | 'csv' | 'editor') => {
-    setDemoModalTab(tab);
-    setIsDemoModalOpen(true);
-  };
 
   const handleSelectTech = (tech: string) => {
     if (selectedTech === tech) {
@@ -79,7 +71,7 @@ export default function App() {
         <ExperienceTimeline filterTech={selectedTech} />
 
         {/* Featured Projects & Case Studies */}
-        <ProjectsShowcase onOpenDemo={handleOpenDemo} />
+        <ProjectsShowcase />
 
         {/* Technical Skills & Architecture Matrix */}
         <SkillsMatrix onSelectSkill={handleSelectTech} selectedSkill={selectedTech} />
@@ -90,13 +82,6 @@ export default function App() {
         {/* Interactive CLI Terminal & Contact Section */}
         <ContactTerminal />
       </main>
-
-      {/* Global Interactive Demos Modal */}
-      <InteractiveDemosModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-        initialTab={demoModalTab}
-      />
 
       {/* Footer */}
       <Footer />

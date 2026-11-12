@@ -1,29 +1,9 @@
 import React from 'react';
-import { Sparkles, ArrowUpRight, Play, Terminal, Layers } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
-interface ProjectsShowcaseProps {
-  onOpenDemo: (tab: 'webrtc' | 'csv' | 'editor') => void;
-}
-
-export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ onOpenDemo }) => {
+export const ProjectsShowcase: React.FC = () => {
   const projects = [
-    {
-      id: 'webrtc',
-      title: 'Real-Time Audio/Video Support Platform & Embeddable Web SDK',
-      tag: 'PHONEPE FINTECH',
-      framework: 'Next.js',
-      category: 'Production Scale',
-      description:
-        "Engineered an end-to-end video/audio KYC and customer support platform powered by LiveKit WebRTC, completely eliminating third-party vendor licensing costs. Built a modular, embeddable Web SDK integrated into PhonePe's agent portal with TanStack Query server-state synchronization.",
-      stats: [
-        { label: 'LATENCY', value: '< 180 ms', color: 'text-secondary' },
-        { label: 'CSAT IMPACT', value: '+40% Boost', color: 'text-primary' },
-        { label: '3RD-PARTY COST', value: '0 INR (Saved)', color: 'text-tertiary' },
-      ],
-      techs: ['LiveKit', 'WebRTC', 'React Query', 'WebSockets', 'Embeddable SDK'],
-      demoTab: 'webrtc' as const,
-      demoLabel: 'Explore WebRTC Architecture',
-    },
+
     {
       id: 'csv-ai',
       title: 'CSV to Interactive Dashboard — AI-Powered Data Visualization',
@@ -38,8 +18,8 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ onOpenDemo }
         { label: 'QUERY SPEED', value: '< 15 ms', color: 'text-tertiary' },
       ],
       techs: ['GenAI APIs', 'DuckDB-wasm', 'Recharts', 'React Table', 'Papa Parse'],
-      demoTab: 'csv' as const,
-      demoLabel: 'Launch DuckDB-wasm Query Sandbox',
+      websiteUrl: 'https://csv-to-dashboard-two.vercel.app/',
+      websiteLabel: 'Visit Website',
     },
     {
       id: 'editor',
@@ -61,11 +41,25 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ onOpenDemo }
         'Playwright E2E',
         'ARIA Roles',
       ],
-      demoTab: 'editor' as const,
-      demoLabel: 'Test Live Editor Primitive',
+      websiteUrl: 'https://github.com/Swatigavhane/RichTextEditor',
+      websiteLabel: 'View on GitHub',
+    },
+    {
+      id: 'webrtc',
+      title: 'Real-Time Audio/Video Support Platform & Embeddable Web SDK',
+      tag: 'PHONEPE FINTECH',
+      framework: 'Next.js',
+      category: 'Production Scale',
+      description:
+        "Engineered an end-to-end video/audio KYC and customer support platform powered by LiveKit WebRTC, completely eliminating third-party vendor licensing costs. Built a modular, embeddable Web SDK integrated into PhonePe's agent portal with TanStack Query server-state synchronization.",
+      stats: [
+        { label: 'LATENCY', value: '< 180 ms', color: 'text-secondary' },
+        { label: 'CSAT IMPACT', value: '+40% Boost', color: 'text-primary' },
+        { label: '3RD-PARTY COST', value: '20 Lac INR (Saved)', color: 'text-tertiary' },
+      ],
+      techs: ['LiveKit', 'WebRTC', 'React Query', 'WebSockets', 'Embeddable SDK'],
     },
   ];
-
   return (
     <section className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-12" id="projects">
       {/* Section Header */}
@@ -106,15 +100,17 @@ export const ProjectsShowcase: React.FC<ProjectsShowcaseProps> = ({ onOpenDemo }
                     {proj.category}
                   </span>
                 </div>
-
-                {/* Interactive Demo Trigger */}
-                <button
-                  onClick={() => onOpenDemo(proj.demoTab)}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/50 hover:border-primary/60 text-primary font-mono text-xs transition-all cursor-pointer"
-                >
-                  <Play className="w-3 h-3 fill-current" />
-                  <span>{proj.demoLabel}</span>
-                </button>
+                {proj.websiteUrl && (
+                  <a
+                    href={proj.websiteUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-surface-container-lowest border border-outline-variant/50 hover:border-primary/60 text-primary font-mono text-xs transition-all"
+                  >
+                    <span>{proj.websiteLabel}</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                )}
               </div>
 
               {/* Title & Description */}
